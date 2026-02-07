@@ -9,7 +9,8 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-const API_URL = "https://onceuponahack.onrender.com/";
+//const API_URL = "https://onceuponahack.onrender.com/";
+const API_URL = "https://free3.daki.cc:4125";
 
 async function getData() {
   const res = await fetch(`${API_URL}/endpoint`);
