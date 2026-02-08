@@ -89,7 +89,9 @@ const Prompt = () => {
     const attempt = () => {
       if (pollAttemptsRef.current >= IMAGE_POLL_MAX_ATTEMPTS) return;
       pollAttemptsRef.current += 1;
-      fetch(`/image?sentence=${encodeURIComponent(sentence)}`)
+      fetch(
+        `https://onceuponahack.onrender.com/image?sentence=${encodeURIComponent(sentence)}`
+      )
         .then((r) => r.json())
         .then((data) => {
           if (data.image) {
