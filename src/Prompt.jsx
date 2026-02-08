@@ -64,7 +64,7 @@ const Prompt = () => {
   const fetchStory = async (wordToAdd) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/story?story=${encodeURIComponent(story.fullStory || "")}&word=${encodeURIComponent(wordToAdd)}`
+        `https://onceuponahack.onrender.com/story?story=${encodeURIComponent(story.fullStory || "")}&word=${encodeURIComponent(wordToAdd)}`
       );
       const data = await response.json();
 
