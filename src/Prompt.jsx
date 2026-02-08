@@ -89,9 +89,7 @@ const Prompt = () => {
     const attempt = () => {
       if (pollAttemptsRef.current >= IMAGE_POLL_MAX_ATTEMPTS) return;
       pollAttemptsRef.current += 1;
-      fetch(
-        `http://localhost:5000/image?sentence=${encodeURIComponent(sentence)}`
-      )
+      fetch(`/image?sentence=${encodeURIComponent(sentence)}`)
         .then((r) => r.json())
         .then((data) => {
           if (data.image) {
