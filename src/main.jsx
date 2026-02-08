@@ -9,10 +9,12 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-//const API_URL = "https://onceuponahack.onrender.com/";
-const BACKEND_URL = "http://free3.daki.cc:4125";
+const API_URL = "https://onceuponahack.onrender.com/";
 
-fetch(`${BACKEND_URL}/story?word=magic&story=Once%20upon%20a%20time`)
-  .then(res => res.json())
-  .then(data => console.log(data));
+async function getData() {
+  const res = await fetch(`${API_URL}/endpoint`);
+  const data = await res.json();
+  console.log(data);
+}
 
+getData();
